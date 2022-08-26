@@ -57,7 +57,7 @@ body {
     border: var(--textColor) 2px solid;
     border-radius: 10px;
     box-shadow: var(--shadowColor) 1px 3px 10px;
-    background-color: #4fc937;
+    background-color: var(--backgroundColor);
     
     font-size: 16px;
     font-weight: 700;
