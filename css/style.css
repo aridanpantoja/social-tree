@@ -7,14 +7,16 @@
 }
 
 :root {
-    --backgroundColor: #3F37C9;
+    --mainColor: #3F37C9;
+    --secondColor: #17144A;
+    --thirtyColor: #2E2996;
     --textColor: #f2f7ff;
     --shadowColor: rgba(0, 0, 0, 0.5);
 }
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: var(--backgroundColor);
+    background: linear-gradient(90deg, var(--mainColor) 0%, var(--thirtyColor) 100%);
 }
 
 .main, .top {
@@ -26,6 +28,7 @@ body {
 
 .main {
     padding: 50px;
+    height: 100vh;
 }
 
 /* Topo */
@@ -34,14 +37,16 @@ body {
     border-radius: 50%;
     border: var(--textColor) 4px solid;
     box-shadow: var(--shadowColor) 1px 3px 10px;
+
+    margin: 20px auto;
 }
 
 .top h3 {
     color: var(--textColor);
     font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 1.6px;
     text-shadow: var(--shadowColor) 1px 3px 10px;
-
-    margin-top: 10px;
 }
 
 /* Links  */
@@ -53,11 +58,15 @@ body {
     margin: 30px 0px 30px 0px;
 }
 
-.links a button {
+.links a:link, a:active, a:hover, a:visited {
+    text-decoration: none;
+}
+
+.links a div {
     border: var(--textColor) 2px solid;
     border-radius: 10px;
     box-shadow: var(--shadowColor) 1px 3px 10px;
-    background-color: var(--backgroundColor);
+    background-color: var(--mainColor);
     
     font-size: 16px;
     font-weight: 700;
@@ -65,6 +74,33 @@ body {
     
     width: 300px;
     height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    transition: 0.2s;
+}
+
+.links a div:hover {
+    transform: scale(1.05);
+}
+
+.links a div p {
+    text-shadow: var(--shadowColor) 1px 3px 10px;
+    color: var(--textColor);
+}
+
+div #tela-login {
+    background-image: url(../img/login-page-background.png);
+}
+
+div #social-tree {
+    background-image: url(../img/social-tree-background.png);
+}
+
+div .em-breve {
+    background-image: url(../img/em-breve-background.png);
 }
 
 /* Social */
@@ -75,5 +111,12 @@ body {
 
 .social a i {
     color: var(--textColor);
-    filter: drop-shadow(1px 3px 10px var(--shadowColor))
+    filter: drop-shadow(1px 3px 10px var(--shadowColor));
+
+    transition: 0.3s;
+}
+
+.social a i:hover {
+    transform: scale(1.1);
+    color: #17144A;
 }
